@@ -1,0 +1,5 @@
+--title 'Semver String'
+--output-dir docs
+--markup markdown
+--markup-provider kramdown
+lib/**/*.rb

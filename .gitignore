@@ -1,0 +1,6 @@
+/Gemfile.lock
+/coverage
+/docs
+/docs.tgz
+/.yardoc
+/semver-string-*.gem
