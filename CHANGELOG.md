@@ -3,4 +3,6 @@
 Unreleased Changes
 ------------------
 
-* Added test, build, and release automation tasks.
+* Add basic support for SemverString objects that correctly sort.
+
+* Add test, build, and release automation tasks.

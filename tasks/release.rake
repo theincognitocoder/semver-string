@@ -10,7 +10,7 @@ task 'release' => [
 
 task 'release:require-version' do
   if ENV['VERSION'].to_s.empty?
-    warn("usage: VERSION=x.y.z rake release")
+    warn('usage: VERSION=x.y.z rake release')
     exit(1)
   end
   begin
