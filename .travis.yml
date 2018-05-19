@@ -1,5 +1,4 @@
 script: bundle exec rake build
-
 rvm:
 - ruby-2.1.10
 - ruby-2.2.10
@@ -10,31 +9,26 @@ rvm:
 - jruby-9.0.5.0
 - jruby-9.1.9.0
 - jruby-head
-
 deploy:
-
-  # Publish to RubyGems.org
-  - provider: rubygems
-    gemspec: semver-string.gemspec
-    skip_cleanup: true
-    api_key:
-      secure: xDwsZ/j3an8kpvl7eODYO4tctYOWFVK0LPCL8VntEDgv1Xaxl3r3HCVd5c4YF13a2kfZaqF5WPWd97s8+igrN2ZBsaQ+vg6ZFI3jRISC5zhPb/fJlGsIA5bQmgKQQXS1TuQvbZ9BVeIAO33TOzCkd5RezFO0xAumW3q9XcCWKve+c4GJiCHOQ1tPuL5ADqNd4WNmAF8MfMydC+IO10YBN5H63gmXKYoTad91FTuSijLPqTm1311uDgQ4YsbyH2Fei4LqpHJ9kIofVi2OCh41+PGO3RlsvC/J8+tkNTxqRrH1mVAy5gw7ygTnjPH4XtZq0W18K7HyBI6CMgVXXslUWMfmYlVgVSzmYMgu/Ny+KwnfyC/X7Qoh706OsbkcGKsdifyIUF4IyF712gNxihBk3zHju03WzPVMTBOXLqiHp5T2MU+7arx+ifwNrJpOQ0WTssyR4KNppxq+pEo0+bZ/OTAfoOAsEJ9ydqMqEzUfrsE97AttaMX8uAev6NyUzRQI8hteXaHRYowqV95WTgqvn4eSzuoz7gcfs46vpnTC7RQmHWkCmDRndUC8tgKJlWC9XP2OfM3gchYYlQW6YQklUzdHzFnM9FE1T1+4dZHlvgyYgpqGqV1K/TpZuoPYRQCYtZj36uM1aip7YINHPUWE/3kM/M+Nx1jPiuu64UOXrm4=
-    on:
-      ruby: ruby-2.5.1
-      branch: master
-      tags: true
-
-  # Publish to GitHub releases
-  - provider: releases
-    skip_cleanup: true
-    fileglob: true
-    file:
-      - docs.tgz
-      - semver-string-*.gem
-    api_key:
-      secure: pqrstcdRYkVmOvj6BFSmPpKHqva/Njqmlk4GKXU4i5QJiGKtxaYO86usOKnw8wOq04rcy9dxSoQyUDfo7XtPItPSCzz44OSPGypZeFq070H7Qw0IEfOPXOKyvv5kMXOQga8PTYHOKNaT2xEN0jfLNhcDIEcDgnWglThyZQKIg6M=
-    on:
-      ruby: ruby-2.5.1
-      repo: theincognitocoder/semver-string
-      branch: master
-      tags: true
+- provider: rubygems
+  gemspec: semver-string.gemspec
+  skip_cleanup: true
+  api_key:
+    secure: iuHCB3xWwSrJ6R6bE7e06TJbVKnE6u7QyHFIW5lXMk7oELxdZjGJw4UVkmhsNab1WMi9UolaRku0CbkmH2wkaLi7gOKF8tasyKt5HS2lcdZw+hS+4wRQ0oMQNFiDoU03TUe9ZucWtWzu+vlHRA7dvSCrexptupTvOFqZSz+3r3oLOkP1G84T7LQZNyKoGylhKqsLZxpQ55xjwM1fKgeIM18j2fd3PoaqWbbp/fLv2vQYus0CCy/qNrqqygxzAzSWd8hVWLGhsXZgXINL6mwTkrWSs/VOiuIcr4rmb08PYCujPj56iI0QA50oo47rnzWtYUxvwtJNMhOs2KrTOWrmST49dE/g/920eE2n1StuL2FaCxczNBHsW82QzClroE1fDxq3dcGPs17PCtDnxsAIPU6SQ3zdQTKRE8676dO0MUX388OPOUxuVLSW0GWg2LCQI8PDgnQHFTdTpyE+Ic2YYxmSElfEbB4AwUuAwT4CEoym8trFiZSfdJ1llhjIQyxFWop3l0FQtBUn5RPOMnkz6DMvwwNVvKpZYLwbC+rtCZh9a9kwl/5Vv8i6pFZlTIiU/yw7Lgd4LaOorOvJ9pcCYmL6OKPdUSNo3SMUpJl0yH1FiGXPa7IDdpp3dgW9zYGrQNNMtmkKpRf5oqOqeO1z3ReVXS6jRsFWCexuz0O7zAA=
+  on:
+    ruby: ruby-2.5.1
+    branch: master
+    tags: true
+- provider: releases
+  skip_cleanup: true
+  fileglob: true
+  file:
+  - docs.tgz
+  - semver-string-*.gem
+  api_key:
+    secure: Bwz3M7qU+9LVjNes9zGf2gPRH6zTTsP6PmT4Is5Va9YvcEj9IqjQGkuA0P1XcnpSCuH7jQ4WM3aym2zHMZ2cq7tZ8Zw+Ui9MhQ9Zgtzj53s2at+3JTZ1LTVX5F9SG/wAyk0UT38hsIGiaChl3x2/IBnkOnC7x9f895ks6zfDZNYvo4WN35T8B28nN2B5L5wlum7K5UXQg8zM22tJLfXP3YNQVMWYbYMfXQVMU1jVCYlzPSswoMzi6PesiRwL5RelUXyTtNEfMWb092bqVvWNm14HRVi/XyrzNy+VIE9C0llH5Jlmc2d92XmDTkO8QDfiEwmXHlPpDUkIomdilKWHftjMx4sTtB3UYGG8LtYqySTyoyPrRLX+1osfE+xIi2HmDn6SEapoRRb6xkJatAN7w30fHxlzsZ+TO0u+xM6HR7QWJftSDLPt1YtZ0CNbTJyFET89w454oM0lK4fQlr8FXp2JYjAnfTr26n9Wl+qbCzlLA65GkVYZPf2gK7iN9+cMQ/CUmDx7XbvPMQjECobpyjM43vfAIA1IATISWPa7Qnex76d4PiJl42ysddppwxo4QmaPrk99lrXAAO/dgzmGt+BBMK7tAZpJqGFuj9SMSBPi3kwamM0DcGckAt44a5d0ymk5B7y0kX0bHcplhHkz7it6aQLo+hRoCgyFRFG+9jk=
+  on:
+    ruby: ruby-2.5.1
+    repo: theincognitocoder/semver-string
+    branch: master
+    tags: true
