@@ -43,12 +43,11 @@ end
 
 task 'release:tag' do
   File.write('VERSION', "#{version}\n")
-  issues = `git log $(git describe --tags --abbrev=0)...HEAD -E --grep '#[0-9]+' 2>/dev/null`
-  issues = issues.scan(/((?:\S+\/\S+)?#\d+)/).flatten
+  git_cmd = '$(git describe --tags --abbrev=0)'
+  git_cmd = "git log #{git_cmd}...HEAD -E --grep '#[0-9]+' 2>/dev/null"
+  issues = `#{git_cmd}`.scan(%r{((?:\S+/\S+)?#\d+)}).flatten
   msg = "Tag release v#{version}\n\n"
-  unless issues.empty?
-    msg += "References: #{issues.uniq.sort.join(', ')}\n\n"
-  end
+  msg += "References: #{issues.uniq.sort.join(', ')}\n\n" unless issues.empty?
   sh('git add VERSION')
   sh("git commit -m \"Bump version to v#{version}\"")
   sh("git tag -a -m #{msg.inspect} v#{version}")

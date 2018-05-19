@@ -1,9 +1,8 @@
 # frozen_string_literal: true
 
 Gem::Specification.new do |spec|
-
   spec.name          = 'semver-string'
-  spec.version       = File.read(File.expand_path('../VERSION', __FILE__)).strip
+  spec.version       = File.read(File.expand_path('VERSION', __dir__)).strip
   spec.summary       = 'Semver String'
   spec.description   = 'Semver String'
   spec.authors       = ['The Incognito Coder']
@@ -22,5 +21,4 @@ Gem::Specification.new do |spec|
     'source_code_uri'   => 'https://github.com/theincognitocoder/semver-string',
     'wiki_uri'          => 'https://github.com/theincognitocoder/semver-string/wiki',
   }
-
 end
