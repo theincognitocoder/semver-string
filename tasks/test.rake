@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 desc 'Runs the test suite'
 task 'test' => [
   'test:clean',

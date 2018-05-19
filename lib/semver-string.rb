@@ -1,4 +1,4 @@
-class SemverString < String
+class SemverString
 
   EMPTY_ERROR = 'must not be empty'
 
@@ -18,7 +18,6 @@ class SemverString < String
     @z = z
     @pre_release = pre_release ? pre_release[1..-1] : nil
     @build_metadata = build_metadata ? build_metadata[1..-1] : nil
-    super("%d.%d.%d%s%s" % [x, y, z, pre_release, build_metadata])
   end
 
   # @return [Integer]
@@ -35,6 +34,11 @@ class SemverString < String
 
   # @return [String, nil]
   attr_accessor :build_metadata
+
+  def to_str
+    format("%d.%d.%d%s%s", x, y, z, pre_release, build_metadata)
+  end
+  alias to_s to_str
 
   # See section #11 of https://semver.org/
   # @api private
@@ -65,7 +69,7 @@ class SemverString < String
       return -1
     elsif !pr_a && pr_b
       return 1
-    elsif !pre_release && !other.pre_release
+    elsif !pr_a && !pr_b
       return 0
     end
 

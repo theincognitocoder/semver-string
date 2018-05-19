@@ -29,27 +29,27 @@ RSpec.describe SemverString do
     end
 
     it 'throws when nil' do
-      expect {
+      expect do
         SemverString.new(nil)
-      }.to raise_error(SemverString::InvalidFormatError)
+      end.to raise_error(SemverString::InvalidFormatError)
     end
 
     it 'throws when empty' do
-      expect {
+      expect do
         SemverString.new('')
-      }.to raise_error(SemverString::InvalidFormatError)
+      end.to raise_error(SemverString::InvalidFormatError)
     end
 
     it 'throws when missing .z' do
-      expect {
+      expect do
         SemverString.new('1.2')
-      }.to raise_error(SemverString::InvalidFormatError)
+      end.to raise_error(SemverString::InvalidFormatError)
     end
 
     it 'throws for non-valid semver characters' do
-      expect {
+      expect do
         SemverString.new('1.2.3-beta!')
-      }.to raise_error(SemverString::InvalidFormatError)
+      end.to raise_error(SemverString::InvalidFormatError)
     end
 
   end

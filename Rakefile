@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+$LOAD_PATH.unshift(File.expand_path('../lib', __FILE__))
+
 Dir.glob('tasks/**/*.rake').each do |task_file|
   load(task_file)
 end
