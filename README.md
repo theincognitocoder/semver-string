@@ -1,6 +1,6 @@
 # Semver String
 
-[![Gitter](https://badges.gitter.im/theincognitocoder/semver-string.svg)](https://gitter.im/theincognitocoder/semver-string?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge) [![Build Status](https://travis-ci.org/theincognitocoder/semver-string.svg?branch=master)](https://travis-ci.org/theincognitocoder/semver-string) [![Code Climate](https://codeclimate.com/github/theincognitocoder/semver-string.svg)](https://codeclimate.com/github/theincognitocoder/semver-string) [![Coverage Status](https://coveralls.io/repos/theincognitocoder/semver-string/badge.svg?branch=master)](https://coveralls.io/r/theincognitocoder/semver-string?branch=master)
+[![Gitter](https://badges.gitter.im/theincognitocoder/semver-string.svg)](https://gitter.im/theincognitocoder/semver-string?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge) [![Build Status](https://travis-ci.org/theincognitocoder/semver-string.svg?branch=master)](https://travis-ci.org/theincognitocoder/semver-string) [![Coverage Status](https://coveralls.io/repos/theincognitocoder/semver-string/badge.svg?branch=master)](https://coveralls.io/r/theincognitocoder/semver-string?branch=master)
 
 Semver String
 
