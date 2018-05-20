@@ -6,8 +6,6 @@ rvm:
 - ruby-2.4.4
 - ruby-2.5.1
 - ruby-head
-- jruby-9.0.5.0
-- jruby-9.1.9.0
 - jruby-head
 deploy:
 - provider: rubygems
