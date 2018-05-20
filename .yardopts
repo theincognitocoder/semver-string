@@ -1,5 +1,8 @@
 --title 'Semver String'
 --output-dir docs
 --markup markdown
---markup-provider kramdown
+--markup-provider rdiscount
+--hide-api private
+--no-progress
+--plugin sitemap
 lib/**/*.rb

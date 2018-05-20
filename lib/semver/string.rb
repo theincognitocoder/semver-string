@@ -8,12 +8,16 @@ require_relative 'parser'
 module Semver
   # A helper class for working with semantic versioning strings.
   #
-  #   version = Semver::String.new('1.2.3-alpha+build-123')
-  #   version.major #=> 1
-  #   version.major #=> 2
-  #   version.patch #=> 3
-  #   version.pre_release #=> alpha
-  #   version.build_metadata #=> build-123
+  # ```ruby
+  # version = Semver::String.new('1.2.3-alpha+build-123')
+  #
+  # version.major #=> 1
+  # version.major #=> 2
+  # version.patch #=> 3
+  # version.pre_release #=> alpha
+  # version.build_metadata #=> build-123
+  # version.to_s #=> "1.2.3-alpha+build-123"
+  # ```
   #
   class String
 
@@ -76,15 +80,14 @@ module Semver
       end
     end
 
-    # @return [Boolean]
-    # @api private
+    # @return [Boolean] Returns `true` if the string value of the
+    #   two objects are equal.
     def ==(other)
       to_s == other.to_s
     end
 
-    # See section #11 of https://semver.org/
+    # See section #11 of https://semver.org/spec/v2.0.0.html
     # @return [Integer] Returns -1, 0, or 1.
-    # @api private
     def <=>(other)
       Comparator.new.compare(left: self, right: other)
     end
