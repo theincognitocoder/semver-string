@@ -15,8 +15,9 @@ task 'clean' => [
 
 task 'build' => [
   'test',
-  'docs:build',
-  'gem:build',
+  'rubocop',
+  'docs',
+  'gem',
 ]
 
 task 'default' => [

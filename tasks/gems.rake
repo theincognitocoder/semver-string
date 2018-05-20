@@ -1,5 +1,11 @@
 # frozen_string_literal: true
 
+desc 'Builds a gem'
+task 'gem' => [
+  'gem:clean',
+  'gem:build',
+]
+
 task 'gem:build' do
   sh('gem build semver-string.gemspec')
 end
