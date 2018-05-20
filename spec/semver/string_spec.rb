@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require_relative '../spec_helper'
-
 RSpec.describe Semver::String do
   context '.parse' do
     it 'parses semver strings with pre-release' do
