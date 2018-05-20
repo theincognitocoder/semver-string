@@ -16,4 +16,5 @@ end
 group 'documentation' do
   gem 'kramdown'
   gem 'yard', '~> 0.9'
+  gem 'yard-sitemap', '~> 1.0'
 end
