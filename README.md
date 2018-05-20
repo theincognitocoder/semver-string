@@ -14,21 +14,21 @@ Semver String
 
 Add semver-string to your project's Gemfile and then bundle install.
 
-```ruby
+~~~
 gem 'semver-string', '~> 1'
-```
+~~~
 
 ## Basic Usage
 
 Begin by requiring the gem:
 
-```ruby
+~~~
 require 'semver/string'
-```
+~~~
 
 You can construct a `Semver::String` from a Ruby String:
 
-```ruby
+~~~
 version = Semver::String.parse('1.2.3-rc.1+build-123456789')
 
 version.major #=> 1
@@ -36,11 +36,11 @@ version.minor #=> 2
 version.patch #=> 3
 version.pre_release #=> "rc.1"
 version.build_metadata #=> "build-123456789"
-```
+~~~
 
 You can also construct one from the semver components:
 
-```ruby
+~~~
 # only major, minor, and patch are required
 version = Semver::String.new(
   major: 1,
@@ -50,14 +50,14 @@ version = Semver::String.new(
   build_metadata: 'build-123456789')
 
 version.to_s #=> "1.2.3-rc.1+build-123456789"
-```
+~~~
 
 `Semver::String` objects can be compared and sorted. Sorting is done
 according to the rules defined at [semver.org](https://semver.org/).
 
-```
+~~~
 Semver::String.parse('1.10.0') < Semver::String.parse('1.2.0') #=> false
-```
+~~~
 
 ## License
 

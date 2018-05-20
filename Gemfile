@@ -14,6 +14,6 @@ group 'development' do
 end
 
 group 'documentation' do
-  gem 'rdiscount', '~> 2.2'
+  gem 'kramdown'
   gem 'yard', '~> 0.9'
 end

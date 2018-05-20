@@ -1,7 +1,7 @@
 --title 'Semver String'
 --output-dir docs
 --markup markdown
---markup-provider rdiscount
+--markup-provider kramdown
 --hide-api private
 --no-progress
 --plugin sitemap

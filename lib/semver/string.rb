@@ -8,7 +8,7 @@ require_relative 'parser'
 module Semver
   # A helper class for working with semantic versioning strings.
   #
-  # ```ruby
+  # ~~~
   # version = Semver::String.new('1.2.3-alpha+build-123')
   #
   # version.major #=> 1
@@ -17,8 +17,7 @@ module Semver
   # version.pre_release #=> alpha
   # version.build_metadata #=> build-123
   # version.to_s #=> "1.2.3-alpha+build-123"
-  # ```
-  #
+  # ~~~
   class String
 
     # @param [String] string
