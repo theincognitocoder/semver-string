@@ -68,6 +68,20 @@ RSpec.describe Semver::String do
       expect(versions.shuffle.sort).to eq(versions)
     end
 
+    it 'compares numerical pre-release identifiers low-to-high' do
+      v1 = Semver::String.parse('1.0.0-rc.2')
+      v2 = Semver::String.parse('1.0.0-rc.10')
+      expect(v1 <=> v2).to eq(-1)
+      expect(v2 <=> v1).to eq(1)
+    end
+
+    it 'compares alpha pre-release identifiers lexicographically' do
+      v1 = Semver::String.parse('1.0.0-alpha10')
+      v2 = Semver::String.parse('1.0.0-alpha2')
+      expect(v1 <=> v2).to eq(-1)
+      expect(v2 <=> v1).to eq(1)
+    end
+
     it 'sorts ignores build metadata' do
       v1 = Semver::String.parse('1.0.0+build-123')
       v2 = Semver::String.parse('1.0.0+build-456')
