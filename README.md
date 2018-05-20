@@ -1,6 +1,7 @@
 # Semver String
 
-[![Build Status](https://travis-ci.org/theincognitocoder/semver-string.svg?branch=master)](https://travis-ci.org/theincognitocoder/semver-string) [![Coverage Status](https://coveralls.io/repos/theincognitocoder/semver-string/badge.svg?branch=master)](https://coveralls.io/r/theincognitocoder/semver-string?branch=master)
+[![Build Status](https://travis-ci.org/theincognitocoder/semver-string.svg?branch=master)](https://travis-ci.org/theincognitocoder/semver-string)
+[![Coverage Status](https://coveralls.io/repos/github/theincognitocoder/semver-string/badge.svg?branch=master)](https://coveralls.io/github/theincognitocoder/semver-string?branch=master)
 
 Semver String
 
