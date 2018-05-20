@@ -9,7 +9,6 @@ Semver String
 
 * [Documentation](https://www.rubydoc.info/github/theincognitocoder/semver-string/master)
 * [Changelog](https://github.com/theincognitocoder/semver-string/blob/master/CHANGELOG.md)
-* [Gitter Channel](https://gitter.im/theincognitocoder/semver-string)
 
 ## Installation
 
