@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/theincognitocoder/semver-string.svg?branch=master)](https://travis-ci.org/theincognitocoder/semver-string)
 [![Coverage Status](https://coveralls.io/repos/github/theincognitocoder/semver-string/badge.svg?branch=master)](https://coveralls.io/github/theincognitocoder/semver-string?branch=master)
+[![Maintainability](https://api.codeclimate.com/v1/badges/f9ac56f41cd6333d98ee/maintainability)](https://codeclimate.com/github/theincognitocoder/semver-string/maintainability)
 
 Semver String
 
