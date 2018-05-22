@@ -20,4 +20,13 @@ Gem::Specification.new do |spec|
     'source_code_uri'   => 'https://github.com/theincognitocoder/semver-string',
     'wiki_uri'          => 'https://github.com/theincognitocoder/semver-string/wiki',
   }
+
+  spec.add_development_dependency('coveralls', '~> 0.8')
+  spec.add_development_dependency('kramdown', '~> 1.16')
+  spec.add_development_dependency('pry', '~> 0.11')
+  spec.add_development_dependency('rake', '~> 12.3')
+  spec.add_development_dependency('rspec', '~> 3.7')
+  spec.add_development_dependency('rubocop', '~> 0.56')
+  spec.add_development_dependency('yard', '~> 0.9')
+  spec.add_development_dependency('yard-sitemap', '~> 1.0')
 end
