@@ -16,9 +16,7 @@ Gem::Specification.new do |spec|
     'changelog_uri'     => 'https://github.com/theincognitocoder/semver-string/blob/master/CHANGELOG.md',
     'documentation_uri' => 'https://www.rubydoc.info/github/theincognitocoder/semver-string/master',
     'homepage_uri'      => 'https://github.com/theincognitocoder/semver-string',
-    'mailing_list_uri'  => 'https://gitter.im/theincognitocoder/semver-string',
     'source_code_uri'   => 'https://github.com/theincognitocoder/semver-string',
-    'wiki_uri'          => 'https://github.com/theincognitocoder/semver-string/wiki',
   }
 
   spec.add_development_dependency('coveralls', '~> 0.8')
